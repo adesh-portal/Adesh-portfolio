@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adesh | AI Engineer · Cybersecurity · Full-Stack Developer</title>
+    <meta name="description"
+        content="Portfolio of Adesh — BCA Engineer specializing in AI/ML, Cybersecurity, and Full-Stack Development. Enter the command center.">
+    <meta name="keywords"
+        content="Adesh Portfolio, AI Engineer, Cybersecurity Specialist, Full-Stack Developer, Machine Learning, BCA">
+    <meta name="author" content="Adesh">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;700&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome & Devicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================================================================
+         BOOT SEQUENCE OVERLAY
+         ================================================================ -->
+    <div class="boot-overlay" id="boot-overlay">
+        <div class="boot-scanline"></div>
+        <div class="boot-content">
+            <div class="boot-logo">
+                <span class="boot-logo-text">ADESH<span class="boot-logo-accent">.SYS</span></span>
+                <div class="boot-logo-bar"></div>
+            </div>
+            <div class="boot-terminal" id="boot-terminal">
+                <div class="boot-line" data-delay="200">
+                    <span class="boot-prompt">SYS</span>
+                    <span class="boot-text">Initializing secure environment...</span>
+                    <span class="boot-status ok">OK</span>
+                </div>
+                <div class="boot-line" data-delay="700">
+                    <span class="boot-prompt">AI </span>
+                    <span class="boot-text">Loading neural network modules...</span>
+                    <span class="boot-status ok">OK</span>
+                </div>
+                <div class="boot-line" data-delay="1200">
+                    <span class="boot-prompt">SEC</span>
+                    <span class="boot-text">Verifying cryptographic signatures...</span>
+                    <span class="boot-status ok">OK</span>
+                </div>
+                <div class="boot-line" data-delay="1700">
+                    <span class="boot-prompt">NET</span>
+                    <span class="boot-text">Establishing encrypted tunnel...</span>
+                    <span class="boot-status ok">OK</span>
+                </div>
+                <div class="boot-line" data-delay="2200">
+                    <span class="boot-prompt">DEV</span>
+                    <span class="boot-text">Mounting full-stack environment...</span>
+                    <span class="boot-status ok">OK</span>
+                </div>
+                <div class="boot-line" data-delay="2700">
+                    <span class="boot-prompt">SYS</span>
+                    <span class="boot-text">All systems operational.</span>
+                    <span class="boot-status ok">READY</span>
+                </div>
+            </div>
+            <div class="boot-access" id="boot-access">
+                <div class="boot-access-line">▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓</div>
+                <div class="boot-access-text">ACCESS GRANTED</div>
+                <div class="boot-access-sub">WELCOME TO THE COMMAND CENTER</div>
+            </div>
+            <div class="boot-skip" id="boot-skip">Press any key or click to skip</div>
+        </div>
+    </div>
+
+    <!-- ================================================================
+         GLOBAL BACKGROUND CANVAS
+         ================================================================ -->
+    <canvas id="bg-canvas"></canvas>
+    <div class="matrix-rain-overlay" id="matrix-overlay"></div>
+
+    <!-- ================================================================
+         SCROLL PROGRESS BAR
+         ================================================================ -->
+    <div class="scroll-progress-bar" id="scroll-progress"></div>
+
+    <!-- ================================================================
+         JUGNU — GLOWING SCROLL FIREFLY
+         ================================================================ -->
+    <div class="jugnu-track" id="jugnu-track">
+        <div class="jugnu-dot" id="jugnu-dot">
+            <div class="jugnu-core"></div>
+            <div class="jugnu-ring ring-1"></div>
+            <div class="jugnu-ring ring-2"></div>
+            <div class="jugnu-tail" id="jugnu-tail"></div>
+        </div>
+        <div class="jugnu-label" id="jugnu-label">0%</div>
+    </div>
+
+    <!-- ================================================================
+         NAVIGATION
+         ================================================================ -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo" id="nav-logo">
+                <span class="logo-name">ADESH</span>
+                <span class="logo-dot">-</span>
+                <span class="logo-role">DEV</span>
+            </a>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="#hero" class="nav-link" data-section="hero">Home</a>
+                <a href="#about" class="nav-link" data-section="about">About</a>
+                <a href="#cybersec" class="nav-link" data-section="cybersec">CyberSec</a>
+                <a href="#ai-lab" class="nav-link" data-section="ai-lab">AI Lab</a>
+                <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+                <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+                <a href="#terminal-section" class="nav-link" data-section="terminal-section">Console</a>
+                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <div class="nav-status-dot"></div>
+                <span class="nav-status-text">Online</span>
+                <a href="#contact" class="nav-cta">Hire Me <i class="fa-solid fa-arrow-right-long"></i></a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="#hero" class="mob-link">Home</a>
+        <a href="#about" class="mob-link">About</a>
+        <a href="#cybersec" class="mob-link">CyberSec</a>
+        <a href="#ai-lab" class="mob-link">AI Lab</a>
+        <a href="#skills" class="mob-link">Skills</a>
+        <a href="#projects" class="mob-link">Projects</a>
+        <a href="#terminal-section" class="mob-link">Console</a>
+        <a href="#contact" class="mob-link">Contact</a>
+    </div>
+
+    <!-- ================================================================
+         ZONE 01: HERO — IDENTITY
+         ================================================================ -->
+    <section id="hero" class="hero-section">
+        <canvas id="hero-canvas"></canvas>
+
+        <!-- Floating grid lines -->
+        <div class="hero-grid-overlay"></div>
+
+        <!-- Parallax layers -->
+        <div class="parallax-layer parallax-slow" id="parallax-1">
+            <div class="floating-orb orb-1"></div>
+            <div class="floating-orb orb-2"></div>
+            <div class="floating-orb orb-3"></div>
+        </div>
+
+        <div class="hero-container">
+            <!-- Left: Identity -->
+            <div class="hero-content reveal-left">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span>BCA · AI/ML · Cybersecurity · Full-Stack</span>
+                </div>
+
+                <h1 class="hero-title">
+                    <span class="hero-greeting">Hello, I'm</span>
+                    <span class="hero-name glitch-text" data-text="ADESH">ADESH</span>
+                </h1>
+
+                <div class="hero-typewriter-wrap">
+                    <span class="tw-prefix">I build </span>
+                    <span class="tw-text" id="hero-typewriter"></span>
+                    <span class="tw-cursor">|</span>
+                </div>
+
+                <p class="hero-desc">
+                    Engineering the intersection of <span class="accent-cyan">Artificial Intelligence</span>,
+                    <span class="accent-green">Cybersecurity</span>, and
+                    <span class="accent-purple">Full-Stack Development</span> —
+                    building systems that are smart, secure, and scalable.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#projects" class="btn-primary">
+                        <span>Explore Work</span>
+                        <i class="fa-solid fa-rocket"></i>
+                    </a>
+                    <a href="#terminal-section" class="btn-ghost">
+                        <i class="fa-solid fa-terminal"></i>
+                        <span>Open Terminal</span>
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="hs-item">
+                        <span class="hs-num">9.2</span>
+                        <span class="hs-label">GPA</span>
+                    </div>
+                    <div class="hs-divider"></div>
+                    <div class="hs-item">
+                        <span class="hs-num">10+</span>
+                        <span class="hs-label">Projects</span>
+                    </div>
+                    <div class="hs-divider"></div>
+                    <div class="hs-item">
+                        <span class="hs-num">3</span>
+                        <span class="hs-label">Domains</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Floating Terminal Widget -->
+            <div class="hero-visual reveal-right">
+                <div class="hero-terminal-widget">
+                    <div class="htw-header">
+                        <div class="htw-dots">
+                            <span class="htw-dot red"></span>
+                            <span class="htw-dot yellow"></span>
+                            <span class="htw-dot green"></span>
+                        </div>
+                        <span class="htw-title">adesh@command-center:~</span>
+                        <div class="htw-signal"><span></span><span></span><span></span></div>
+                    </div>
+                    <div class="htw-body" id="hero-term-body">
+                        <div class="htw-line"><span class="htw-prompt">$</span> <span class="htw-cmd">whoami</span>
+                        </div>
+                        <div class="htw-output">adesh — AI Engineer | Cyber Specialist | Dev</div>
+                        <div class="htw-line"><span class="htw-prompt">$</span> <span class="htw-cmd">cat
+                                skills.json</span></div>
+                        <div class="htw-output htw-json" id="skills-json-output"></div>
+                        <div class="htw-line blink-line"><span class="htw-prompt">$</span> <span
+                                class="htw-cursor-blink">_</span></div>
+                    </div>
+                    <div class="htw-footer">
+                        <span class="htw-badge green-badge">● SECURE</span>
+                        <span class="htw-badge blue-badge">● ONLINE</span>
+                        <span class="htw-badge">v2.6.14</span>
+                    </div>
+                </div>
+
+                <!-- Floating tech badges -->
+                <div class="tech-orb orb-python" title="Python"><i class="devicon-python-plain"></i></div>
+                <div class="tech-orb orb-react" title="React"><i class="devicon-react-original"></i></div>
+                <div class="tech-orb orb-shield" title="Cybersecurity"><i class="fa-solid fa-shield-halved"></i></div>
+                <div class="tech-orb orb-ai" title="AI/ML"><i class="fa-solid fa-brain"></i></div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+            <span class="si-text">Scroll to explore</span>
+            <div class="si-mouse">
+                <div class="si-wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================
+         ZONE 02: ABOUT — MISSION & BACKGROUND
+         ================================================================ -->
+    <section id="about" class="about-section section-zone">
+        <div class="zone-label">ZONE 02 // IDENTITY & MISSION</div>
+        <div class="section-container">
+            <div class="section-head reveal-up">
+                <div class="sh-tag">About Me</div>
+                <h2 class="sh-title">The Mind Behind <span class="text-gradient">The Machine</span></h2>
+                <p class="sh-sub">BCA student turned multi-domain engineer — bridging theory and production systems</p>
+            </div>
+
+            <div class="about-grid">
+                <!-- Profile card -->
+                <div class="about-profile-card glass-card reveal-left">
+                    <div class="apc-avatar-ring">
+                        <img src="assets/avatar.png" alt="Adesh" class="apc-avatar">
+                        <div class="apc-ring-glow"></div>
+                    </div>
+                    <h3 class="apc-name">Adesh</h3>
+                    <p class="apc-role">AI/ML · Cybersecurity · Full-Stack</p>
+                    <div class="apc-divider"></div>
+                    <div class="apc-info">
+                        <div class="apc-row">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <span>Bachelor of Computer Applications</span>
+                        </div>
+                        <div class="apc-row">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>New Delhi, India</span>
+                        </div>
+                        <div class="apc-row">
+                            <i class="fa-solid fa-star"></i>
+                            <span>CGPA: 9.2 / 10.0</span>
+                        </div>
+                        <div class="apc-row">
+                            <i class="fa-solid fa-code-branch"></i>
+                            <span>Open to Internships & Roles</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn-primary full-width">
+                        <i class="fa-solid fa-paper-plane"></i> Contact Me
+                    </a>
+                </div>
+
+                <!-- Timeline + skills reveal -->
+                <div class="about-right reveal-right">
+                    <p class="about-bio">
+                        I'm an engineering-minded builder passionate about systems that sit at the crossroads of
+                        <strong>intelligence</strong>, <strong>security</strong>, and <strong>scalability</strong>.
+                        From training ML models to hardening network architectures, I bring a rare multi-domain
+                        perspective to every problem I tackle.
+                    </p>
+
+                    <!-- Skill bars -->
+                    <div class="skill-bars">
+                        <div class="skill-bar-item">
+                            <div class="sbi-header">
+                                <span>AI / Machine Learning</span>
+                                <span class="sbi-pct">82%</span>
+                            </div>
+                            <div class="sbi-track">
+                                <div class="sbi-fill" style="--w:82%; --color:#00d4ff;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="sbi-header">
+                                <span>Cybersecurity</span>
+                                <span class="sbi-pct">78%</span>
+                            </div>
+                            <div class="sbi-track">
+                                <div class="sbi-fill" style="--w:78%; --color:#00ff88;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="sbi-header">
+                                <span>Full-Stack Development</span>
+                                <span class="sbi-pct">90%</span>
+                            </div>
+                            <div class="sbi-track">
+                                <div class="sbi-fill" style="--w:90%; --color:#a855f7;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="sbi-header">
+                                <span>Database Systems</span>
+                                <span class="sbi-pct">85%</span>
+                            </div>
+                            <div class="sbi-track">
+                                <div class="sbi-fill" style="--w:85%; --color:#f59e0b;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education timeline -->
+                    <div class="edu-timeline">
+                        <div class="et-item reveal-up">
+                            <div class="et-dot" style="--c:#00d4ff;"></div>
+                            <div class="et-card glass-card">
+                                <span class="et-tag" style="--c:#00d4ff;">CS Core</span>
+                                <h4>Data Structures & Algorithms</h4>
+                                <p>Deep mastery of arrays, trees, graphs, DP, and O(n) complexity analysis</p>
+                            </div>
+                        </div>
+                        <div class="et-item reveal-up" style="--delay:0.1s;">
+                            <div class="et-dot" style="--c:#a855f7;"></div>
+                            <div class="et-card glass-card">
+                                <span class="et-tag" style="--c:#a855f7;">AI/ML</span>
+                                <h4>Machine Learning & Neural Networks</h4>
+                                <p>Supervised & unsupervised learning, CNNs, RNNs, TensorFlow, PyTorch</p>
+                            </div>
+                        </div>
+                        <div class="et-item reveal-up" style="--delay:0.2s;">
+                            <div class="et-dot" style="--c:#00ff88;"></div>
+                            <div class="et-card glass-card">
+                                <span class="et-tag" style="--c:#00ff88;">Security</span>
+                                <h4>Network Security & Cryptography</h4>
+                                <p>Threat modeling, encryption algorithms, firewall architecture, pen-testing basics</p>
+                            </div>
+                        </div>
+                        <div class="et-item reveal-up" style="--delay:0.3s;">
+                            <div class="et-dot" style="--c:#f59e0b;"></div>
+                            <div class="et-card glass-card">
+                                <span class="et-tag" style="--c:#f59e0b;">DBMS</span>
+                                <h4>Database Design & Architecture</h4>
+                                <p>Relational normalization, SQL optimization, MongoDB, distributed systems</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================
+         ZONE 03: CYBERSECURITY COMMAND CENTER
+         ================================================================ -->
+    <section id="cybersec" class="cybersec-section section-zone">
+        <div class="zone-label">ZONE 03 // CYBERSECURITY OPERATIONS</div>
+        <div class="section-scanline"></div>
+        <canvas id="threat-canvas"></canvas>
+
+        <div class="section-container">
+            <div class="section-head reveal-up">
+                <div class="sh-tag green-tag">CyberSec</div>
+                <h2 class="sh-title">Security <span class="text-gradient-green">Operations</span> Center</h2>
+                <p class="sh-sub">Monitoring, defense, and threat intelligence — securing digital perimeters</p>
+            </div>
+
+            <!-- SOC Status Bar -->
+            <div class="soc-status-bar reveal-up">
+                <div class="soc-stat">
+                    <span class="soc-indicator green-pulse"></span>
+                    <span class="soc-label">Firewall</span>
+                    <span class="soc-val green">ACTIVE</span>
+                </div>
+                <div class="soc-stat">
+                    <span class="soc-indicator green-pulse"></span>
+                    <span class="soc-label">IDS/IPS</span>
+                    <span class="soc-val green">MONITORING</span>
+                </div>
+                <div class="soc-stat">
+                    <span class="soc-indicator amber-pulse"></span>
+                    <span class="soc-label">Threat Level</span>
+                    <span class="soc-val amber">LOW</span>
+                </div>
+                <div class="soc-stat">
+                    <span class="soc-indicator green-pulse"></span>
+                    <span class="soc-label">Encryption</span>
+                    <span class="soc-val green">AES-256</span>
+                </div>
+                <div class="soc-stat">
+                    <span class="soc-indicator green-pulse"></span>
+                    <span class="soc-label">VPN Tunnel</span>
+                    <span class="soc-val green">SECURED</span>
+                </div>
+            </div>
+
+            <!-- Threat map + Competency cards -->
+            <div class="cybersec-grid">
+                <!-- Left: animated threat map visualization -->
+                <div class="threat-map-panel glass-card reveal-left">
+                    <div class="tmp-header">
+                        <i class="fa-solid fa-globe"></i>
+                        <span>Global Threat Intelligence</span>
+                        <span class="tmp-live-badge">● LIVE</span>
+                    </div>
+                    <div class="threat-map-container">
+                        <canvas id="world-map-canvas"></canvas>
+                        <div class="threat-map-legend">
+                            <span class="tml-item"><span class="tml-dot red-dot"></span>Attack Source</span>
+                            <span class="tml-item"><span class="tml-dot green-dot"></span>Defended</span>
+                            <span class="tml-item"><span class="tml-dot amber-dot"></span>Monitoring</span>
+                        </div>
+                    </div>
+                    <div class="threat-log" id="threat-log">
+                        <div class="tl-entry">
+                            <span class="tl-time">15:08:42</span>
+                            <span class="tl-type blocked">BLOCKED</span>
+                            <span class="tl-msg">SQL Injection attempt from 192.168.x.x</span>
+                        </div>
+                        <div class="tl-entry">
+                            <span class="tl-time">15:08:19</span>
+                            <span class="tl-type blocked">BLOCKED</span>
+                            <span class="tl-msg">Port scan detected — 445, 3389</span>
+                        </div>
+                        <div class="tl-entry">
+                            <span class="tl-time">15:07:55</span>
+                            <span class="tl-type monitored">MONITOR</span>
+                            <span class="tl-msg">Unusual traffic spike — WAN interface</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Cybersec skills -->
+                <div class="cybersec-skills reveal-right">
+                    <div class="cs-skill-card glass-card">
+                        <div class="cs-icon" style="--c:#00ff88;"><i class="fa-solid fa-shield-halved"></i></div>
+                        <div class="cs-content">
+                            <h4>Network Defense</h4>
+                            <p>Firewall configuration, IDS/IPS, VPN setup, DMZ architecture, packet filtering</p>
+                        </div>
+                    </div>
+                    <div class="cs-skill-card glass-card">
+                        <div class="cs-icon" style="--c:#00d4ff;"><i class="fa-solid fa-lock"></i></div>
+                        <div class="cs-content">
+                            <h4>Cryptography</h4>
+                            <p>AES, RSA, SHA hashing, PKI, TLS/SSL implementation, key management</p>
+                        </div>
+                    </div>
+                    <div class="cs-skill-card glass-card">
+                        <div class="cs-icon" style="--c:#a855f7;"><i class="fa-solid fa-magnifying-glass-chart"></i>
+                        </div>
+                        <div class="cs-content">
+                            <h4>Threat Intelligence</h4>
+                            <p>OSINT, vulnerability assessment, MITRE ATT&CK framework, CVE analysis</p>
+                        </div>
+                    </div>
+                    <div class="cs-skill-card glass-card">
+                        <div class="cs-icon" style="--c:#f59e0b;"><i class="fa-solid fa-bug"></i></div>
+                        <div class="cs-content">
+                            <h4>Ethical Hacking</h4>
+                            <p>Penetration testing basics, SQL injection, XSS, CSRF, Burp Suite, Kali Linux</p>
+                        </div>
+                    </div>
+                    <div class="cs-skill-card glass-card">
+                        <div class="cs-icon" style="--c:#ff4d6d;"><i class="fa-solid fa-chart-network"></i></div>
+                        <div class="cs-content">
+                            <h4>SOC Operations</h4>
+                            <p>Log analysis, SIEM tools, incident response, digital forensics fundamentals</p>
+                        </div>
+                    </div>
+                    <div class="cs-skill-card glass-card">
+                        <div class="cs-icon" style="--c:#00ff88;"><i class="fa-solid fa-code"></i></div>
+                        <div class="cs-content">
+                            <h4>Secure Development</h4>
+                            <p>OWASP Top 10, secure coding, input validation, auth flows, secrets management</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools showcase -->
+            <div class="tools-row reveal-up">
+                <span class="tools-label">Security Stack:</span>
+                <div class="tools-chips">
+                    <span class="tool-chip"><i class="fa-brands fa-linux"></i> Kali Linux</span>
+                    <span class="tool-chip">Wireshark</span>
+                    <span class="tool-chip">Burp Suite</span>
+                    <span class="tool-chip">Metasploit</span>
+                    <span class="tool-chip">Nmap</span>
+                    <span class="tool-chip">OpenSSL</span>
+                    <span class="tool-chip">Snort IDS</span>
+                    <span class="tool-chip">HashCat</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================
+         ZONE 04: AI / ML RESEARCH LABORATORY
+         ================================================================ -->
+    <div class="ai-layout">
+
+        <div class="brain-panel">
+            <canvas id="neural-canvas"></canvas>
+        </div>
+
+        <div class="skills-grid">
+
+            <div class="skill-box">
+                <h3>Machine Learning</h3>
+                <p>92%</p>
+            </div>
+
+            <div class="skill-box">
+                <h3>Deep Learning</h3>
+                <p>87%</p>
+            </div>
+
+            <div class="skill-box">
+                <h3>Data Science</h3>
+                <p>90%</p>
+            </div>
+
+            <div class="skill-box">
+                <h3>Generative AI</h3>
+                <p>80%</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================================================================
+         ZONE 05: SKILLS — TECH UNIVERSE
+         ================================================================ -->
+    <section id="skills" class="skills-section section-zone">
+        <div class="zone-label">ZONE 05 // TECHNOLOGY UNIVERSE</div>
+        <div class="section-container">
+            <div class="section-head reveal-up">
+                <div class="sh-tag">Skills</div>
+                <h2 class="sh-title">Technology <span class="text-gradient">Arsenal</span></h2>
+                <p class="sh-sub">A constellation of tools, languages, and frameworks powering every project</p>
+            </div>
+
+            <!-- Orbit canvas system -->
+            <div class="skills-universe reveal-up">
+                <div class="orbit-canvas-wrap">
+                    <canvas id="skills-orbit-canvas"></canvas>
+                    <div class="orbit-core">
+                        <img src="assets/avatar.png" alt="Adesh">
+                        <div class="orbit-core-ring"></div>
+                        <div class="orbit-core-ring ring-2"></div>
+                    </div>
+                </div>
+                <div class="orbit-info-panel glass-card" id="orbit-info">
+                    <div class="oip-default">
+                        <i class="fa-solid fa-satellite-dish"></i>
+                        <p>Hover a skill node to view expertise details</p>
+                    </div>
+                    <div class="oip-detail" id="oip-detail" style="display:none">
+                        <div class="oip-name" id="oip-name"></div>
+                        <div class="oip-category" id="oip-category"></div>
+                        <div class="oip-bar-wrap">
+                            <div class="oip-bar-fill" id="oip-bar"></div>
+                        </div>
+                        <p class="oip-desc" id="oip-desc"></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech category cards -->
+            <div class="tech-categories reveal-up">
+                <div class="tc-card glass-card">
+                    <div class="tc-header">
+                        <i class="fa-solid fa-code" style="color:#00d4ff;"></i>
+                        <h4>Languages</h4>
+                    </div>
+                    <div class="tc-chips">
+                        <span class="tc-chip"><i class="devicon-python-plain"></i> Python</span>
+                        <span class="tc-chip"><i class="devicon-java-plain"></i> Java</span>
+                        <span class="tc-chip"><i class="devicon-javascript-plain"></i> JavaScript</span>
+                        <span class="tc-chip"><i class="devicon-cplusplus-plain"></i> C++</span>
+                        <span class="tc-chip"><i class="devicon-mysql-plain"></i> SQL</span>
+                    </div>
+                </div>
+                <div class="tc-card glass-card">
+                    <div class="tc-header">
+                        <i class="fa-solid fa-layer-group" style="color:#a855f7;"></i>
+                        <h4>Full-Stack</h4>
+                    </div>
+                    <div class="tc-chips">
+                        <span class="tc-chip"><i class="devicon-react-original"></i> React</span>
+                        <span class="tc-chip"><i class="devicon-nodejs-plain"></i> Node.js</span>
+                        <span class="tc-chip"><i class="devicon-express-original"></i> Express</span>
+                        <span class="tc-chip"><i class="devicon-mongodb-plain"></i> MongoDB</span>
+                        <span class="tc-chip"><i class="devicon-html5-plain"></i> HTML5/CSS3</span>
+                    </div>
+                </div>
+                <div class="tc-card glass-card">
+                    <div class="tc-header">
+                        <i class="fa-solid fa-brain" style="color:#00ff88;"></i>
+                        <h4>AI / ML</h4>
+                    </div>
+                    <div class="tc-chips">
+                        <span class="tc-chip"><i class="devicon-tensorflow-original"></i> TensorFlow</span>
+                        <span class="tc-chip"><i class="devicon-pytorch-original"></i> PyTorch</span>
+                        <span class="tc-chip"><i class="devicon-pandas-plain"></i> Pandas</span>
+                        <span class="tc-chip"><i class="devicon-numpy-plain"></i> NumPy</span>
+                        <span class="tc-chip"><i class="devicon-scikitlearn-plain"></i> Sklearn</span>
+                    </div>
+                </div>
+                <div class="tc-card glass-card">
+                    <div class="tc-header">
+                        <i class="fa-solid fa-wrench" style="color:#f59e0b;"></i>
+                        <h4>Dev Tools</h4>
+                    </div>
+                    <div class="tc-chips">
+                        <span class="tc-chip"><i class="devicon-git-plain"></i> Git</span>
+                        <span class="tc-chip"><i class="devicon-github-original"></i> GitHub</span>
+                        <span class="tc-chip"><i class="devicon-vscode-plain"></i> VS Code</span>
+                        <span class="tc-chip"><i class="devicon-docker-plain"></i> Docker</span>
+                        <span class="tc-chip"><i class="devicon-linux-plain"></i> Linux</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================
+         ZONE 06: PROJECTS VAULT
+         ================================================================ -->
+    <section id="projects" class="projects-section section-zone">
+        <div class="zone-label">ZONE 06 // PROJECTS VAULT</div>
+        <div class="section-container">
+            <div class="section-head reveal-up">
+                <div class="sh-tag">Projects</div>
+                <h2 class="sh-title">The <span class="text-gradient">Project</span> Vault</h2>
+                <p class="sh-sub">Real systems, intelligent solutions, and production-grade applications</p>
+            </div>
+
+            <!-- Filters -->
+            <div class="pf-filters reveal-up">
+                <button class="pf-btn active" data-filter="all">All</button>
+                <button class="pf-btn" data-filter="web">Full-Stack</button>
+                <button class="pf-btn" data-filter="ai">AI / ML</button>
+                <button class="pf-btn" data-filter="sec">Cybersecurity</button>
+                <button class="pf-btn" data-filter="tool">Tools</button>
+            </div>
+
+            <!-- Project Cards Grid -->
+            <div class="projects-grid" id="projects-grid">
+
+                <!-- Project 1: Trading Dashboard -->
+                <div class="pj-card glass-card reveal-up" data-category="web">
+                    <div class="pj-image-wrap">
+                        <img src="assets/project-trading.png" alt="Neon Trading Dashboard" class="pj-img">
+                        <div class="pj-overlay">
+                            <div class="pj-overlay-actions">
+                                <button class="pj-modal-btn" data-project="trading">
+                                    <i class="fa-solid fa-expand"></i> Details
+                                </button>
+                                <a href="https://github.com/adesh-portal?tab=repositories" target="_blank" class="pj-link-btn">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="pj-category-badge">Full-Stack</div>
+                    </div>
+                    <div class="pj-body">
+                        <h3 class="pj-title">Neon Trading Dashboard</h3>
+                        <p class="pj-desc">Live-updating stock & crypto portfolio tracker with glassmorphic UI, Chart.js
+                            visualization, and real-time transaction ledger.</p>
+                        <div class="pj-tech">
+                            <span>JavaScript</span>
+                            <span>CSS Grid</span>
+                            <span>Chart.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: CodeHub -->
+                <div class="pj-card glass-card reveal-up" data-category="tool" style="--delay:0.1s;">
+                    <div class="pj-image-wrap">
+                        <img src="assets/project-editor.png" alt="CodeHub Workspace" class="pj-img">
+                        <div class="pj-overlay">
+                            <div class="pj-overlay-actions">
+                                <button class="pj-modal-btn" data-project="codehub">
+                                    <i class="fa-solid fa-expand"></i> Details
+                                </button>
+                                <a href="https://github.com/adesh-portal?tab=repositories" target="_blank" class="pj-link-btn">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="pj-category-badge">Tool</div>
+                    </div>
+                    <div class="pj-body">
+                        <h3 class="pj-title">CodeHub Workspace</h3>
+                        <p class="pj-desc">Collaborative online editor with file tree simulation, multi-tab switching,
+                            syntax highlighting, and mock terminal execution.</p>
+                        <div class="pj-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>Socket.io</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: BCA Portal -->
+                <div class="pj-card glass-card reveal-up" data-category="tool" style="--delay:0.2s;">
+                    <div class="pj-image-wrap">
+                        <div class="pj-placeholder-img" style="--c:#00d4ff;">
+                            <i class="fa-solid fa-database"></i>
+                            <span>DBMS System</span>
+                        </div>
+                        <div class="pj-overlay">
+                            <div class="pj-overlay-actions">
+                                <button class="pj-modal-btn" data-project="dbms">
+                                    <i class="fa-solid fa-expand"></i> Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="pj-category-badge">Database</div>
+                    </div>
+                    <div class="pj-body">
+                        <h3 class="pj-title">BCA Portal Optimizer</h3>
+                        <p class="pj-desc">Academic scheduling database with BCNF normalization, SQL index optimization,
+                            and Python GUI for GPA reporting.</p>
+                        <div class="pj-tech">
+                            <span>MySQL</span>
+                            <span>Python</span>
+                            <span>SQLAlchemy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Intrusion Detection AI -->
+                <div class="pj-card glass-card reveal-up" data-category="ai sec" style="--delay:0.1s;">
+                    <div class="pj-image-wrap">
+                        <div class="pj-placeholder-img" style="--c:#00ff88;">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <span>AI Security System</span>
+                        </div>
+                        <div class="pj-overlay">
+                            <div class="pj-overlay-actions">
+                                <button class="pj-modal-btn" data-project="ids">
+                                    <i class="fa-solid fa-expand"></i> Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="pj-category-badge green-badge">AI · SecOps</div>
+                    </div>
+                    <div class="pj-body">
+                        <h3 class="pj-title">ML Intrusion Detection</h3>
+                        <p class="pj-desc">Network intrusion detection system using Random Forest & LSTM models trained
+                            on NSL-KDD dataset with 97% accuracy.</p>
+                        <div class="pj-tech">
+                            <span>Python</span>
+                            <span>Scikit-learn</span>
+                            <span>TensorFlow</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: NLP Analyzer -->
+                <div class="pj-card glass-card reveal-up" data-category="ai" style="--delay:0.2s;">
+                    <div class="pj-image-wrap">
+                        <div class="pj-placeholder-img" style="--c:#a855f7;">
+                            <i class="fa-solid fa-brain"></i>
+                            <span>NLP Sentiment</span>
+                        </div>
+                        <div class="pj-overlay">
+                            <div class="pj-overlay-actions">
+                                <button class="pj-modal-btn" data-project="nlp">
+                                    <i class="fa-solid fa-expand"></i> Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="pj-category-badge purple-badge">AI · NLP</div>
+                    </div>
+                    <div class="pj-body">
+                        <h3 class="pj-title">NLP Sentiment Analyzer</h3>
+                        <p class="pj-desc">Real-time sentiment analysis engine using BERT fine-tuning on Twitter
+                            datasets. REST API with Flask and React dashboard.</p>
+                        <div class="pj-tech">
+                            <span>PyTorch</span>
+                            <span>BERT</span>
+                            <span>Flask</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Crypto Toolkit -->
+                <div class="pj-card glass-card reveal-up" data-category="sec" style="--delay:0.3s;">
+                    <div class="pj-image-wrap">
+                        <div class="pj-placeholder-img" style="--c:#f59e0b;">
+                            <i class="fa-solid fa-key"></i>
+                            <span>Crypto Toolkit</span>
+                        </div>
+                        <div class="pj-overlay">
+                            <div class="pj-overlay-actions">
+                                <button class="pj-modal-btn" data-project="crypto">
+                                    <i class="fa-solid fa-expand"></i> Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="pj-category-badge amber-badge">CyberSec</div>
+                    </div>
+                    <div class="pj-body">
+                        <h3 class="pj-title">Cryptography Toolkit</h3>
+                        <p class="pj-desc">Interactive cryptography lab: AES/RSA encryption demo, hash generator
+                            (MD5/SHA), password strength analyzer, and JWT decoder.</p>
+                        <div class="pj-tech">
+                            <span>Python</span>
+                            <span>Cryptography</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div class="pj-modal-overlay" id="pj-modal">
+        <div class="pj-modal-box glass-card">
+            <button class="pj-modal-close" id="pj-modal-close"><i class="fa-solid fa-xmark"></i></button>
+            <div id="pj-modal-content"></div>
+        </div>
+    </div>
+
+    <!-- ================================================================
+         ZONE 07: STATS — MISSION CONTROL
+         ================================================================ -->
+    <section id="stats" class="stats-section section-zone">
+        <div class="zone-label">ZONE 07 // MISSION CONTROL DASHBOARD</div>
+        <div class="section-container">
+            <div class="section-head reveal-up">
+                <div class="sh-tag">Stats</div>
+                <h2 class="sh-title">Command Center <span class="text-gradient">Metrics</span></h2>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card glass-card reveal-up">
+                    <div class="stat-icon" style="--c:#00d4ff;"><i class="fa-solid fa-folder-open"></i></div>
+                    <div class="stat-num counter" data-target="15">0</div>
+                    <div class="stat-label">Projects Built</div>
+                </div>
+                <div class="stat-card glass-card reveal-up" style="--delay:0.1s;">
+                    <div class="stat-icon" style="--c:#a855f7;"><i class="fa-brands fa-github"></i></div>
+                    <div class="stat-num counter" data-target="500">0</div>
+                    <div class="stat-label">GitHub Commits</div>
+                </div>
+                <div class="stat-card glass-card reveal-up" style="--delay:0.2s;">
+                    <div class="stat-icon" style="--c:#00ff88;"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div class="stat-num counter" data-target="30">0</div>
+                    <div class="stat-label">Security Labs</div>
+                </div>
+                <div class="stat-card glass-card reveal-up" style="--delay:0.3s;">
+                    <div class="stat-icon" style="--c:#f59e0b;"><i class="fa-solid fa-brain"></i></div>
+                    <div class="stat-num counter" data-target="8">0</div>
+                    <div class="stat-label">ML Models Trained</div>
+                </div>
+                <div class="stat-card glass-card reveal-up" style="--delay:0.4s;">
+                    <div class="stat-icon" style="--c:#ff4d6d;"><i class="fa-solid fa-code"></i></div>
+                    <div class="stat-num counter" data-target="20000">0</div>
+                    <div class="stat-label">Lines of Code</div>
+                </div>
+                <div class="stat-card glass-card reveal-up" style="--delay:0.5s;">
+                    <div class="stat-icon" style="--c:#00d4ff;"><i class="fa-solid fa-star"></i></div>
+                    <div class="stat-num gpa-counter">9.2</div>
+                    <div class="stat-label">GPA Score</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================
+         ZONE 08: INTERACTIVE TERMINAL
+         ================================================================ -->
+    <section id="terminal-section" class="terminal-section section-zone">
+        <div class="zone-label">ZONE 08 // DEVELOPER CONSOLE</div>
+        <div class="section-container">
+            <div class="section-head reveal-up">
+                <div class="sh-tag">Console</div>
+                <h2 class="sh-title">Developer <span class="text-gradient">Terminal</span></h2>
+                <p class="sh-sub">Query the portfolio database — try: <code>help</code>, <code>whoami</code>,
+                    <code>hack-the-system</code>
+                </p>
+            </div>
+
+            <div class="terminal-widget glass-card reveal-up" id="terminal-widget">
+                <div class="tw-header">
+                    <div class="tw-dots">
+                        <span class="tw-dot red"></span>
+                        <span class="tw-dot yellow"></span>
+                        <span class="tw-dot green"></span>
+                    </div>
+                    <span class="tw-title">adesh@command-center: ~/portfolio</span>
+                    <div class="tw-actions">
+                        <span class="tw-badge">● SSH</span>
+                        <span class="tw-badge">● ENC</span>
+                    </div>
+                </div>
+
+                <div class="tw-body" id="terminal-log">
+                    <div class="tw-line info">
+                        ████████████████████████████████████████
+                        ADESH COMMAND CENTER v2.6.14 — SECURE SHELL
+                        ████████████████████████████████████████
+                    </div>
+                    <div class="tw-line muted">Type <span class="tw-hl">help</span> for all commands. Try easter eggs:
+                        <span class="tw-hl">whoami</span>, <span class="tw-hl">matrix-mode</span>, <span
+                            class="tw-hl">hack-the-system</span>
+                    </div>
+                    <div class="tw-line">&nbsp;</div>
+                </div>
+
+                <div class="tw-quick-cmds">
+                    <button class="tw-cmd-btn" onclick="runCmd('help')">help</button>
+                    <button class="tw-cmd-btn" onclick="runCmd('skills')">skills</button>
+                    <button class="tw-cmd-btn" onclick="runCmd('projects')">projects</button>
+                    <button class="tw-cmd-btn" onclick="runCmd('whoami')">whoami</button>
+                    <button class="tw-cmd-btn" onclick="runCmd('certifications')">certs</button>
+                    <button class="tw-cmd-btn" onclick="runCmd('contact')">contact</button>
+                    <button class="tw-cmd-btn" onclick="runCmd('clear')">clear</button>
+                </div>
+
+                <div class="tw-input-row">
+                    <span class="tw-prompt">adesh@cmd:~$</span>
+                    <input type="text" id="terminal-input" placeholder="Enter command..." autocomplete="off"
+                        spellcheck="false">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================
+         ZONE 09: CONTACT — COMMUNICATION HUB
+         ================================================================ -->
+    <section id="contact" class="contact-section section-zone">
+        <div class="zone-label">ZONE 09 // COMMUNICATION HUB</div>
+        <canvas id="contact-canvas"></canvas>
+        <div class="section-container">
+            <div class="section-head reveal-up">
+                <div class="sh-tag">Contact</div>
+                <h2 class="sh-title">Initiate <span class="text-gradient">Connection</span></h2>
+                <p class="sh-sub">Open to internships, collaborations, and full-time roles — let's build something
+                    extraordinary</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Info pane -->
+                <div class="contact-info glass-card reveal-left">
+                    <h3>Direct Lines</h3>
+                    <p class="ci-sub">Encrypted and secure — every message goes directly to me.</p>
+
+                    <div class="ci-items">
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=adeshtrivedi49@gmail.com&su=Portfolio%20Inquiry"
+                            target="_blank" class="ci-item">
+                            <div class="ci-icon" style="--c:#00d4ff;">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="ci-text">
+                                <span class="ci-label">Email</span>
+                                <span class="ci-val">Connect on Gmail </span>
+                            </div>
+                            <i class="fa-solid fa-arrow-right ci-arrow"></i>
+                        </a>
+                        <a href="https://github.com/adesh-portal?tab=repositories" target="_blank" class="ci-item">
+                            <div class="ci-icon" style="--c:#a855f7;"><i class="fa-brands fa-github"></i></div>
+                            <div class="ci-text">
+                                <span class="ci-label">GitHub</span>
+                                <span class="ci-val">Check My github</span>
+                            </div>
+                            <i class="fa-solid fa-arrow-right ci-arrow"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/adesh-trivedi-640a9927b/?isSelfProfile=false" target="_blank" class="ci-item">
+                            <div class="ci-icon" style="--c:#00d4ff;"><i class="fa-brands fa-linkedin"></i></div>
+                            <div class="ci-text">
+                                <span class="ci-label">LinkedIn</span>
+                                <span class="ci-val">Chcek My Work on LinkedIn </span>
+                            </div>
+                            <i class="fa-solid fa-arrow-right ci-arrow"></i>
+                        </a>
+                        <div class="ci-item no-link">
+                            <div class="ci-icon" style="--c:#00ff88;"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="ci-text">
+                                <span class="ci-label">Location</span>
+                                <span class="ci-val">New Delhi, India</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ci-availability">
+                        <span class="cia-dot"></span>
+                        <span>Available for internships & remote work & Full Time Job Also </span>
+                    </div>
+                </div>
+
+                <!-- Contact form -->
+                <div class="contact-form-wrap glass-card reveal-right" id="contact-form-wrap">
+                    <form id="contact-form" onsubmit="sendToWhatsApp(event)">
+                        <div class="cf-row">
+                            <div class="cf-group">
+                                <label for="cf-name">Full Name</label>
+                                <input type="text" id="cf-name" placeholder="John Doe" required>
+                            </div>
+
+                            <div class="cf-group">
+                                <label for="cf-email">Email Address</label>
+                                <input type="email" id="cf-email" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+
+                        <div class="cf-group">
+                            <label for="cf-subject">Subject</label>
+                            <input type="text" id="cf-subject" placeholder="Internship Offer / Project Collaboration"
+                                required>
+                        </div>
+
+                        <div class="cf-group">
+                            <label for="cf-message">Message</label>
+                            <textarea id="cf-message" rows="5"
+                                placeholder="Tell me about your project or opportunity..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primary full-width" id="cf-submit">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>Send via WhatsApp</span>
+                        </button>
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================
+         FOOTER
+         ================================================================ -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <span class="logo-bracket">[</span>ADESH<span class="logo-dot">.</span>DEV<span
+                    class="logo-bracket">]</span>
+            </div>
+            <p class="footer-copy">&copy; 2026 Adesh. Engineered with precision — HTML, CSS & JavaScript.</p>
+            <div class="footer-socials">
+                <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:adeshtrivedi49@gmai.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
