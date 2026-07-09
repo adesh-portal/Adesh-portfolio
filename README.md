@@ -9,10 +9,6 @@ This is a cinematic, sci-fi/hacker-styled personal portfolio for **Adesh**, show
 ## Ui design
 <img width="1920" height="1080" alt="Screenshot (6)" src="https://github.com/user-attachments/assets/b25ce5e4-06a3-42b3-b74c-7a4fea644f1d" />
 <img width="1920" height="1080" alt="Screenshot (7)" src="https://github.com/user-attachments/assets/f932c2de-4970-4e20-b3b3-61d9a53c4549" />
-<img width="1920" height="1080" alt="Screenshot (8)" src="https://github.com/user-attachments/assets/927e4782-0eb8-4ce6-9b17-9da7a3b61423" />
-<img width="1920" height="1080" alt="Screenshot (10)" src="https://github.com/user-attachments/assets/b2c57f6e-4e52-41cb-bc52-540472b21191" />
-<img width="1920" height="1080" alt="Screenshot (12)" src="https://github.com/user-attachments/assets/914923ec-0900-41c0-9aa1-2ea9d2435838" />
-<img width="1920" height="1080" alt="Screenshot (13)" src="https://github.com/user-attachments/assets/5e35170e-c30c-4a3b-be69-dcf4f9b1e273" />
 <img width="1920" height="1080" alt="Screenshot (14)" src="https://github.com/user-attachments/assets/83286f76-57d8-4b23-9f32-15494dd18a3e" />
 <img width="1920" height="1080" alt="Screenshot (15)" src="https://github.com/user-attachments/assets/1b424672-e9c1-4978-9119-2e008cb75ddb" />
 
